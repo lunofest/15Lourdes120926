@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="Francesca - Mis XV Años" />
+  <meta property="og:description"
+    content="¡La cuenta regresiva ha comenzado! Descubre los detalles y confirma tu asistencia." />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/lunofest/15Francesca260926/main/assets/imagenes/miniatura.png" />
+  <meta property="og:url" content="https://lunofest.github.io/15Francesca260926/" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="estilos/normalize.css?v11">
+  <link rel="stylesheet" href="estilos/styles.css?v11">
+  <link rel="stylesheet" href="estilos/mediaQueries.css?v11">
+
+
+  <script src="cache.js"></script>
+  <script src="main.js"></script>
+
+  <title>Mis 15 años</title>
+</head>
+
+<body>
+
+
+  <header class="header">
+
+    <div class="header__principal">
+      <img src="assets/imagenes/corona.webp" class="corona" alt="">
+      <h1 class="header__name">Lourdes</h1>
+      <h3 class="header__subtitle">¡MIS XV AÑOS!</h3>
+      <div class="header__temporizador">
+        <div class="contador">
+          <div class="contador__tiempo">
+            <div>
+              <span class="span__numero" id="dias">00</span>
+              <span class="span__text">días</span>
+            </div>
+            <div>
+              <span class="span__numero" id="horas">00</span>
+              <span class="span__text">horas</span>
+            </div>
+            <div>
+              <span class="span__numero" id="minutos">00</span>
+              <span class="span__text">min</span>
+            </div>
+            <div>
+              <span class="span__numero" id="segundos">00</span>
+              <span class="span__text">seg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="musica">
+      <audio src="assets/musica.mp3"></audio>
+      <button class="musica__button musica__button--play">
+        <span class="musica__icon musica__icon--play">▶</span>
+        <span class="musica__icon musica__icon--pause">||</span>
+      </button>
+    </div>
+
+    <div class="arrow-container">
+      <div class="arrow"></div>
+    </div>
+    <img class="header__wave" src="assets/vectores/wave.svg" alt="">
+  </header>
+
+  <main>
+
+    <video src="assets/video.mp4" class="video" autoplay muted loop playsinline></video>
+
+    <section class="bloque frase">
+
+      <h3 class="frase_paragraph">"Hay momentos inolvidables que se guardarán en el corazón por siempre. <br> Por esa
+        razón quiero que compartas conmigo este día tan especial para mí... <br> Lourdes"</h3>
+
+    </section>
+
+
+    <section class="donde">
+
+      <img class="donde__icon" src="assets/vectores/fiesta.svg" alt="">
+
+      <img class="donde__img" src="assets/imagenes/salon.webp" alt="">
+
+      <div class="donde__texts">
+        <h4 class="donde__text donde__name">Salón Pacheco</h4>
+        <h4 class="donde__text donde__direccion">20 de Junio 2242, Ingeniero Budge, Provincia de Buenos Aires</h4>
+        <h4 class="donde__text donde__hora">12 de Septiembre del 2026</h4>
+        <h4 class="donde__text donde__hora">21:00hs</h4>
+      </div>
+
+      <a class="boton__cta" href="https://maps.app.goo.gl/TxMPvTFC79oBR4ec8">VER UBICACION</a>
+
+
+    </section>
+
+    <section class="playlist">
+      <img class="playlist__icon" src="assets/vectores/playlistICON.svg" alt="">
+      <h4 class="playlist__title">¿Qué canciones no pueden faltar?</h4>
+      <h5 class="playlist__paragraph">¡Ayúdame sugiriendo las canciones que pensás que no pueden faltar en mi cumple!
+      </h5>
+
+      <div class="playlist__inputs">
+        <input class="playlist__input" type="text" id="nombre" placeholder="Tu nombre*" required>
+        <input class="playlist__input" type="text" id="cancion" placeholder="Nombre de la canción*" required>
+        <input class="playlist__input" type="text" id="link" placeholder="(opcional) link de YouTube, Spotify, etc">
+        <button class="boton__cta" id="playlistbtn">ENVIAR RECOMENDACION</button>
+        <p id="error-mensaje" class="error-message"></p>
+      </div>
+    </section>
+
+    <section class="dresscode">
+      <img class="dresscode__img" src="assets/vectores/dresscodeICON.svg" alt="">
+      <h4 class="dresscode__title">Código de vestimenta</h4>
+      <h4 class="dresscode__subtitle">Se reserva el color azul francia para la Quinceañera</h4>
+      <h4 class="dresscode__aviso">ELEGANTE SPORT</h4>
+      <button class="dresscode__ejemplo">VER EJEMPLO</button>
+      <div class="lightbox" id="lightbox">
+        <img class="lightbox__imagen" src="assets/imagenes/drescodeELEGANTE.webp" alt="Imagen de ejemplo">
+        <button class="lightbox__cerrar">Cerrar</button>
+      </div>
+
+    </section>
+
+    <section class="itinerarios">
+      <h3 class="itinerario__aviso">Sábado 12 de Septiembre 2026</h3>
+      <div class="itinerario">
+
+
+        <div class="lineas">
+          <div class="progress-container">
+            <div class="progress"></div>
+          </div>
+
+
+          <article class="itinerario__item item1">
+            <img class="itinerario__icon icon1" src="assets/imagenes/iconos/iconoINVITADOS.webp" alt="">
+            <div class="text left">
+              <h6 class="itinerario__name">Ingreso Invitados</h6>
+              <h6 class="itinerario__name itinerario__name2">21:00hs</h6>
+            </div>
+          </article>
+
+          <article class="itinerario__item item2">
+            <img class="itinerario__icon icon2" src="assets/imagenes/iconos/iconoQUINCEAÑERA.webp" alt="">
+            <div class="text right">
+              <h6 class="itinerario__name">Mi Ingreso</h6>
+              <h6 class="itinerario__name itinerario__name2">22:30hs</h6>
+            </div>
+          </article>
+
+          <article class="itinerario__item item3">
+            <img class="itinerario__icon icon3" src="assets/imagenes/iconos/iconoCENA.webp" alt="">
+            <div class="text left">
+              <h6 class="itinerario__name">Cena</h6>
+              <h6 class="itinerario__name itinerario__name2">23:00hs</h6>
+            </div>
+          </article>
+
+          <article class="itinerario__item item4">
+            <img class="itinerario__icon icon4" src="assets/imagenes/iconos/iconoINICIOfiesta.webp" alt="">
+            <div class="text right">
+              <h6 class="itinerario__name">Inicio de la Fiesta</h6>
+              <h6 class="itinerario__name itinerario__name2">00:00hs</h6>
+            </div>
+          </article>
+          <article class="itinerario__item item5">
+            <img class="itinerario__icon icon5" src="assets/imagenes/iconos/iconoFIN.webp" alt="">
+            <div class="text left">
+              <h6 class="itinerario__name">Cierre de la Fiesta</h6>
+              <h6 class="itinerario__name itinerario__name2">06:00hs</h6>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="regalos">
+
+      <img class="regalos__icon" src="assets/vectores/regalosICON.svg" alt="">
+      <h4 class="regalos__title">Mesa de regalos</h4>
+      <h4 class="regalos__parrafo">Tu presencia es mi mejor regalo, y si querés hacerme un presente, podrás dejarlo en
+        la mesa de regalos o podés hacerlo por transferencia a
+        mi cuenta bancaria</h4>
+
+
+      <button class="regalos__button">VER DATOS BANCARIOS</button>
+      <div class="datos" id="datos">
+        <div class="line"></div>
+        <h5 class="datos__title">CBU</h5>
+        <h5 class="datos__cbu">0000003100005358308871</h5>
+        <button class="datos__copiar" data-copy-target=".datos__cbu">
+          <img class="copiar__icon" src="assets/vectores/copiar.svg" alt="Copiar">
+          COPIAR CBU</button>
+
+        <h5 class="datos__title">ALIAS</h5>
+        <h5 class="datos__alias">lourdesita.mp01</h5>
+        <button class="datos__copiar" data-copy-target=".datos__alias">
+          <img class="copiar__icon" src="assets/vectores/copiar.svg" alt="Copiar">
+          COPIAR ALIAS</button>
+
+        <div class="line"></div>
+      </div>
+
+      <div class="mensaje-copiado" id="mensajeCopiado">
+        <i class="fas fa-check-circle"></i> Copiado exitosamente
+      </div>
+
+
+
+
+      <img class="regalos__wave1" src="assets/vectores/wave.svg" alt="">
+      <img class="regalos__wave2" src="assets/vectores/wave.svg" alt="">
+    </section>
+
+    <section class="bloque">
+      <div class="bloque__container bloque__container3">
+
+        <h4 class="bloque__title bloque__titleINSTA">@cande_.okey</h4>
+
+        <p class="bloque__paragraph bloque__paragraphINSTA">
+          ¡Prepárate para esta gran fiesta! <br>
+          Etiquétame en las fotos y videos que subas
+        </p>
+
+        <a class="bloque__button bloque__buttoninsta"
+          href="https://www.instagram.com/cande_.okey/?utm_source=ig_web_button_share_sheet">Ver Instagram</a>
+
+      </div>
+    </section>
+
+    <section style="display: none;" class="precio1 contenedor">
+      <div class="precio__content1">
+        <h5 class="title precio__title1">Costos de la tarjeta</h5>
+        <p class="parrafo precio__paragraph1">Estamos preparando una noche mágica para festejar mis 15 años, y tu
+          presencia será el regalo más importante. <br>
+          Para ayudarnos a hacer que este día sea inolvidable, les pedimos la colaboración con el costo de la tarjeta.
+          <br> Es un detalle que nos permitirá compartir con ustedes una noche llena de alegría y buenos momentos. <br>
+          ¡Gracias por ser parte de este evento tan especial!
+        </p>
+        <h5 class="precio__monto1"><span class="precio__span1">Precio Adultos:</span> $80.000 </h5>
+        <h5 class="precio__monto1"><span class="precio__span1">Precio Adolescente:</span> $37.000 </h5>
+        <h5 class="precio__monto1"><span class="precio__span1">Precio vigente hasta el 31/03/26 </h5>
+
+      </div>
+      <button class="boton__cta boton__cta_bancarios" id="precio__toggle-btn1">Ver datos bancarios para pagos</button>
+      <div class="precio__mostrar1" id="precio__mostrar1">
+        <h6 class="precio__name1">Titular: ...........</h6>
+        <h6 class="precio__cuil1">Cuil: .........</h6>
+        <h6 class="precio__cuenta1">Mercado Pago </h6>
+        <div class="lines"></div>
+        <div class="datos1">
+          <h6 class="precio__CBU1 cbu__styles">00000000000</h6>
+          <button id="precio__copy-cbu1">Copiar CBU</button>
+          <h6 class="precio__alias1 alias__styles">Aqui tu alias</h6>
+          <button id="precio__copy-alias1">Copiar Alias</button>
+        </div>
+      </div>
+
+      <button class="boton__cta foto__menu1" style="display: none;">Ver Menu alimenticio</button>
+
+    </section>
+
+    <section class="confirmacion contenedor block glow" data-aos="fade-up">
+      <div class="confirmacion__container">
+        <h4 class="parrafo parrafo--confirmacion" data-aos="fade-right">
+          Recordá que tenes hasta el día 20 de Agosto del 2026 para confirmar tu presencia abonando la tarjeta<br>
+        </h4>
+        <div id="asistencia">
+          <div class="asistencia__radios">
+            <label class="asistencia__radio">
+              <input class="assistencia__label" type="radio" name="attendanceOption" value="SI ASISTIRÉ">
+              SI ASISTIRÉ
+            </label>
+            <label class="asistencia__radio">
+              <input class="assistencia__label" type="radio" name="attendanceOption" value="NO ASISTIRÉ">
+              NO ASISTIRÉ
+            </label>
+          </div>
+          <br>
+          <div class="asistencia__datos">
+            <label class="asistencia__label" for="userFullName">Nombre y Apellido:</label>
+            <input class="input__text" type="text" id="userFullName" placeholder="Tu nombre y apellido" required>
+            <br>
+            <label class="asistencia__label asistencia__label2" for="customMessage">Mensaje opcional</label>
+            <textarea class="input__text input__text2" id="customMessage" placeholder="Mensaje opcional"></textarea>
+            <br>
+            <button class="boton__cta boton__cta3" id="btnConfirmacion1">
+              <i class="fab fa-whatsapp whatsapp__icon"></i>Confirmar a Lourdes</button>
+            <button class="boton__cta boton__cta3" id="btnConfirmacion2">
+              <i class="fab fa-whatsapp whatsapp__icon"></i>Confirmar a Ludmila</button>
+            <button class="boton__cta boton__cta3" id="btnConfirmacion3">
+              <i class="fab fa-whatsapp whatsapp__icon"></i>Confirmar a Nancy</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+
+  <section class="agradecimiento block glow contenedor" data-aos="fade-up">
+
+    <div class="agradecimiento__contenedor">
+      <p class="parrafo parrafo--agradecimiento">
+        Este día será uno de los más importantes de mi vida, y quiero disfrutarlo junto a las personas que más quiero.
+        <br> ¡Espero contar con vos para hacer de esta noche un recuerdo inolvidable!
+      </p>
+
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <footer class="footer__final1">
+    <div class="footer__inner1">
+      <div class="footer__brand1">
+        <p class="footer__text1">
+          Página creada por <strong>Luno Digitales</strong>
+          para los 15 años de <strong>Lourdes</strong>.<br>
+          Todos los derechos reservados. <br>Visítanos en:
+        </p>
+
+      </div>
+
+
+      <a class="footer__site1" href="https://www.luno.net.ar" target="_blank" rel="noopener">www.luno.net.ar</a>
+      <div class="footer__social3">
+        <p class="footer__follow1">Síguenos en nuestras redes</p>
+        <a class="icon-link1"
+          href="https://www.instagram.com/lunodigitales?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          aria-label="Instagram de Luno Digitales">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5" fill="none" />
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" fill="none" />
+            <circle cx="18.2" cy="5.8" r="0.7" fill="currentColor" />
+          </svg>
+        </a>
+        <a class="icon-link1" href="https://www.facebook.com/profile.php?id=61581720891655" target="_blank"
+          rel="noopener" aria-label="Facebook de Luno Digitales">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <style>
+    /* ///////////////// footer /////////////////////// */
+
+
+    .footer__final1 {
+      background: linear-gradient(180deg, #1f5aa7 0%, #002672 100%);
+      color: #ffffff;
+      padding: 1.5em 0;
+
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      font-size: 14px;
+      width: clamp(100px, 100%, 1800px);
+      text-align: center;
+      margin: 0 auto 0;
+    }
+
+    .footer__inner1 {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+      text-align: center;
+      padding: 0 1em;
+    }
+
+    .footer__text1 {
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .footer__text1 strong {
+      color: #acc1e6;
+      font-weight: 700;
+    }
+
+    .footer__site1 {
+      display: inline-block;
+      margin-top: 8px;
+      text-decoration: none;
+      color: #acc1e6;
+      font-weight: 600;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .footer__site1:hover {
+      text-decoration: underline;
+    }
+
+    .footer__social3 {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 5px;
+    }
+
+    .footer__follow1 {
+      margin: 0;
+      font-size: 14px;
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    .footer__final1 .icon-link1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .footer__final1 .icon-link1 svg {
+      width: 28px !important;
+      height: 28px !important;
+      display: block;
+      margin: 0;
+    }
+
+    .footer__final1 .icon-link1:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+
+
+
+
+
+  <script src="scripts/scripts.js?v11"></script>
+</body>
+
+</html>
